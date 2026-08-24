@@ -5,654 +5,213 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QV — Queres Viver</title>
 <meta name="description" content="QV — Queres Viver. Crítica cultural portuguesa. Um registo de coisas que aconteceram: o que foi, onde foi, e em que dia foi visto.">
-<meta name="color-scheme" content="light dark">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..600&display=swap" rel="stylesheet">
-
-<style>
-/* ─────────────────────────────────────────────────────────────
-   QV — Queres Viver
-   Literata (texto) · IBM Plex Mono (registo)
-   Um acento: #8C2F1E. Reservado à data e ao foco.
-   ───────────────────────────────────────────────────────────── */
-
-:root {
-  --paper:  #FAF8F4;
-  --ink:    #1A1815;
-  --muted:  #6E6862;
-  --rule:   #DFD9D0;
-  --accent: #8C2F1E;
-
-  --serif: "Literata", ui-serif, Georgia, "Times New Roman", serif;
-  --mono:  "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-
-  /* 33rem = ~66 caracteres em Literata a 19px (medido, não estimado) */
-  --measure: 33rem;
-  --gutter: clamp(1.25rem, 5vw, 2.5rem);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper:  #14120E;
-    --ink:    #E9E4DA;
-    --muted:  #9C958B;
-    --rule:   #302C25;
-    --accent: #E0765C;
-  }
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.1875rem;      /* 19px */
-  line-height: 1.68;
-  font-weight: 400;
-  font-variation-settings: "opsz" 19;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-kerning: normal;
-  padding: 0 var(--gutter) 6rem;
-}
-
-/* ── Foco ───────────────────────────────────────────────────── */
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 1px;
-}
-
-.skip {
-  position: absolute;
-  left: -9999px;
-  font-family: var(--mono);
-  font-size: 0.8125rem;
-}
-.skip:focus {
-  left: var(--gutter);
-  top: 0.75rem;
-  z-index: 10;
-  background: var(--paper);
-  color: var(--ink);
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--rule);
-}
-
-/* ── Ligações ───────────────────────────────────────────────── */
-
-a { color: inherit; }
-
-.prose a {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-  text-decoration-color: var(--rule);
-  transition: text-decoration-color 120ms ease, color 120ms ease;
-}
-.prose a:hover { color: var(--accent); text-decoration-color: var(--accent); }
-
-/* ── Cabeça ─────────────────────────────────────────────────── */
-
-.masthead {
-  max-width: var(--measure);
-  margin: 0 auto;
-  padding: clamp(2.5rem, 8vw, 4.5rem) 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem 1.5rem;
-}
-
-.wordmark {
-  font-family: var(--mono);
-  font-weight: 500;
-  font-size: 0.9375rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.wordmark .full {
-  color: var(--muted);
-  letter-spacing: 0.14em;
-}
-.wordmark .full::before { content: " / "; }
-
-.nav {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  display: flex;
-  gap: 1.4rem;
-}
-.nav a {
-  color: var(--muted);
-  text-decoration: none;
-  padding-bottom: 0.2em;
-  border-bottom: 1px solid transparent;
-}
-.nav a:hover { color: var(--ink); }
-
-/* Estado activo — sem JavaScript, via :has() */
-body:not(:has(.text:target)) .nav a[href="#indice"],
-body:has(#sobre:target) .nav a[href="#sobre"] {
-  color: var(--ink);
-  border-bottom-color: var(--accent);
-}
-
-/* ── Comutação :target ──────────────────────────────────────── */
-
-.text { display: none; }
-.text:target { display: block; }
-body:has(.text:target) .indice { display: none; }
-
-/* ── Índice ─────────────────────────────────────────────────── */
-
-.indice {
-  max-width: var(--measure);
-  margin: 0 auto;
-}
-
-.tagline {
-  font-family: var(--mono);
-  font-size: 0.8125rem;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
-  color: var(--muted);
-  max-width: 30rem;
-  margin: 3.25rem 0 0;
-}
-
-.section-label {
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 4rem 0 0;
-}
-
-.entries {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.entry {
-  padding: 2.25rem 0;
-  border-bottom: 1px solid var(--rule);
-}
-.entry:first-child { border-top: 1px solid var(--rule); margin-top: 1.5rem; }
-.entry:last-child  { border-bottom: none; }
-
-/* Linha de registo, versão compacta (índice) */
-.entry-meta {
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 0.7rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.15rem 0.75rem;
-  line-height: 1.6;
-}
-.entry-meta .date { color: var(--accent); white-space: nowrap; }
-.entry-meta .sep { opacity: 0.45; }
-
-@media (max-width: 30rem) {
-  .entry-meta .sep { display: none; }
-  .entry-meta { flex-direction: column; gap: 0.1rem; }
-}
-
-.entry-title {
-  display: inline-block;
-  font-size: 1.375rem;
-  font-weight: 500;
-  font-variation-settings: "opsz" 22;
-  line-height: 1.25;
-  letter-spacing: -0.008em;
-  text-wrap: balance;
-  text-decoration: none;
-  margin: 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 120ms ease;
-}
-.entry-title:hover { border-bottom-color: var(--accent); }
-
-.entry-standfirst {
-  margin: 0.55rem 0 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--muted);
-  max-width: 32rem;
-  text-wrap: pretty;
-}
-
-/* ── Texto ──────────────────────────────────────────────────── */
-
-.text {
-  max-width: var(--measure);
-  margin: 0 auto;
-}
-
-/* O bloco de registo — o gesto da casa.
-   Acima do título, sempre. Três campos, etiquetados. */
-.record {
-  margin: 3.5rem 0 0;
-  padding: 1.1rem 0 1.15rem;
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--rule);
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.45fr) minmax(0, 0.7fr);
-  gap: 1.2rem;
-}
-
-.record > div { min-width: 0; }
-
-.record dt {
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.19em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 0.45rem;
-}
-
-.record dd {
-  font-family: var(--mono);
-  font-size: 0.78125rem;
-  line-height: 1.55;
-  letter-spacing: 0.005em;
-  margin: 0;
-  hyphens: none;
-}
-
-.record .seen { color: var(--accent); white-space: nowrap; }
-
-@media (max-width: 34rem) {
-  .record {
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
-  }
-}
-
-.text h1 {
-  font-size: clamp(1.85rem, 1.15rem + 3vw, 2.5rem);
-  font-weight: 500;
-  font-variation-settings: "opsz" 40;
-  line-height: 1.14;
-  letter-spacing: -0.017em;
-  text-wrap: balance;
-  margin: 1.75rem 0 0;
-}
-
-.standfirst {
-  font-size: 1.1875rem;
-  line-height: 1.55;
-  font-style: italic;
-  font-variation-settings: "opsz" 19;
-  color: var(--muted);
-  margin: 1rem 0 0;
-  max-width: 30rem;
-  text-wrap: pretty;
-}
-
-.prose {
-  margin: 2.5rem 0 0;
-  hyphens: auto;
-  hyphenate-limit-chars: 7 3 3;
-}
-.prose p {
-  margin: 0 0 1.45em;
-  text-wrap: pretty;
-}
-.prose p:last-child { margin-bottom: 0; }
-
-.prose em { font-style: italic; }
-
-/* ── Rodapé do texto ────────────────────────────────────────── */
-
-.text-footer {
-  margin: 4rem 0 0;
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-.text-footer a {
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-.text-footer a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-
-/* ── Sobre ──────────────────────────────────────────────────── */
-
-#sobre h1 { margin-top: 3.5rem; }
-#sobre .prose { margin-top: 2rem; }
-
-/* ── Colofão ────────────────────────────────────────────────── */
-
-.colophon {
-  max-width: var(--measure);
-  margin: 5rem auto 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  line-height: 1.9;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-/* ── Impressão ──────────────────────────────────────────────── */
-
-@media print {
-  .nav, .text-footer, .skip { display: none; }
-  .text, .indice { display: block !important; }
-  body { padding: 0; font-size: 11pt; }
-  .record { break-inside: avoid; }
-  .text { break-before: page; }
-}
-</style>
 </head>
 
 <body>
 
-<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+<h1>QV — Queres Viver</h1>
 
-<header class="masthead">
-  <a class="wordmark" href="#indice">QV<span class="full">Queres Viver</span></a>
-  <nav class="nav" aria-label="Principal">
-    <a href="#indice">Índice</a>
+<p>Crítica cultural. Um registo de coisas que aconteceram — o que foi, onde foi, e em que dia foi visto.</p>
+
+<hr>
+
+<h2>Índice</h2>
+
+<ul>
+  <li>
+    <small>14.03.2026 · Hamlet, enc. Ana Ribeiro · T. N. D. Maria II, Lisboa</small><br>
+    <a href="#gesto-por-concluir">O gesto que ficou por concluir</a>
+  </li>
+  <li>
+    <small>02.02.2026 · «Território Vago», colectiva · Serralves, Porto</small><br>
+    <a href="#territorio-vago">A arte de não dizer nada, com verba</a>
+  </li>
+  <li>
+    <small>21.01.2026 · Sons da Casa, Ensemble Contemporâneo · Casa da Música, Porto</small><br>
+    <a href="#ruido-branco">Ruído branco, sala cheia</a>
+  </li>
+  <li>
+    <small>08.12.2025 · Ciclo «O Cinema Antes do Fim» · Cinemateca, Lisboa</small><br>
+    <a href="#contra-o-arquivo">Contra o arquivo, com o arquivo</a>
+  </li>
+  <li>
+    <small>19.11.2025 · «Repetição», coreog. Diogo Faria · Culturgest, Lisboa</small><br>
+    <a href="#corpos-que-insistem">Corpos que insistem</a>
+  </li>
+  <li>
     <a href="#sobre">Sobre</a>
-  </nav>
-</header>
+  </li>
+</ul>
 
-<main id="conteudo">
+<hr>
 
-<!-- ═══ ÍNDICE ═══════════════════════════════════════════════ -->
+<article id="gesto-por-concluir">
 
-<section class="indice" id="indice" aria-label="Índice de textos">
+  <dl>
+    <dt>Espectáculo</dt>
+    <dd>Hamlet, encenação de Ana Ribeiro</dd>
+    <dt>Local</dt>
+    <dd>Teatro Nacional D. Maria II, Lisboa</dd>
+    <dt>Visto</dt>
+    <dd><time datetime="2026-03-14">14 de Março de 2026</time></dd>
+  </dl>
 
-  <p class="tagline">
-    Crítica cultural. Um registo de coisas que aconteceram —
-    o que foi, onde foi, e em que dia foi visto.
-  </p>
+  <h2>O gesto que ficou por concluir</h2>
 
-  <h2 class="section-label">Textos</h2>
+  <p><em>Ofélia não sai de cena — e a peça passa a ser outra.</em></p>
 
-  <ol class="entries">
+  <p>Há uma decisão no último quarto de hora que reorganiza tudo o que veio antes. Ofélia não sai. Fica sentada no proscénio, de costas para a corte, enquanto a tragédia se cumpre atrás de si — e nem os actores nem a luz lhe reconhecem a presença. Durante onze minutos, o espectáculo tem duas frentes, e só uma delas sabe que está a ser vista.</p>
 
-    <li class="entry">
-      <p class="entry-meta">
-        <span class="date"><time datetime="2026-03-14">14.03.2026</time></span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>Hamlet, enc. Ana Ribeiro</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>T. N. D. Maria II, Lisboa</span>
-      </p>
-      <a class="entry-title" href="#gesto-por-concluir">O gesto que ficou por concluir</a>
-      <p class="entry-standfirst">Ofélia não sai de cena — e a peça passa a ser outra.</p>
-    </li>
+  <p>É um risco, porque depende inteiramente de o público aguentar a ambiguidade. Ana Ribeiro não explica o dispositivo. Não há vídeo, não há voz <em>off</em>, não há nenhuma das muletas com que o teatro português dos últimos anos se habituou a sublinhar as próprias ideias. Há uma actriz sentada e há o resto. Quem quiser ler ali uma crítica à economia da atenção que a leia; quem preferir uma imagem de luto que fique com ela.</p>
 
-    <li class="entry">
-      <p class="entry-meta">
-        <span class="date"><time datetime="2026-02-02">02.02.2026</time></span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>«Território Vago», colectiva</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>Serralves, Porto</span>
-      </p>
-      <a class="entry-title" href="#territorio-vago">A arte de não dizer nada, com verba</a>
-      <p class="entry-standfirst">Vinte e três artistas, quatro pisos, e uma tese que nunca chega.</p>
-    </li>
+  <p>O que não funciona é a primeira hora. A tradução — nova, assinada pela encenadora — troca a densidade do verso por uma coloquialidade que envelhece depressa. «Ser ou não ser» transforma-se numa hesitação doméstica, e o monólogo perde o que tinha de vertigem. Ganha-se clareza, perde-se peso; a troca não compensa. Há momentos, sobretudo nas cenas com Polónio, em que a peça parece disposta a pedir desculpa por ser antiga.</p>
 
-    <li class="entry">
-      <p class="entry-meta">
-        <span class="date"><time datetime="2026-01-21">21.01.2026</time></span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>Sons da Casa — Ensemble Contemporâneo</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>Casa da Música, Porto</span>
-      </p>
-      <a class="entry-title" href="#ruido-branco">Ruído branco, sala cheia</a>
-      <p class="entry-standfirst">Uma estreia portuguesa que a acústica engoliu.</p>
-    </li>
+  <p>Fica, ainda assim, a sensação rara de ter visto alguém arriscar alguma coisa. O gesto final não conclui — recusa-se a concluir — e é essa recusa que sobrevive à saída do teatro. Três dias depois, continuo a pensar naqueles onze minutos e em quase nada do que os precedeu.</p>
 
-    <li class="entry">
-      <p class="entry-meta">
-        <span class="date"><time datetime="2025-12-08">08.12.2025</time></span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>Ciclo «O Cinema Antes do Fim»</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>Cinemateca, Lisboa</span>
-      </p>
-      <a class="entry-title" href="#contra-o-arquivo">Contra o arquivo, com o arquivo</a>
-      <p class="entry-standfirst">Restaurar é uma decisão editorial. Convém dizê-lo.</p>
-    </li>
+  <p><small><a href="#top">↑ Índice</a></small></p>
 
-    <li class="entry">
-      <p class="entry-meta">
-        <span class="date"><time datetime="2025-11-19">19.11.2025</time></span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>«Repetição», coreog. Diogo Faria</span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span>Culturgest, Lisboa</span>
-      </p>
-      <a class="entry-title" href="#corpos-que-insistem">Corpos que insistem</a>
-      <p class="entry-standfirst">Cinquenta minutos de uma frase só. Funciona.</p>
-    </li>
+</article>
 
-  </ol>
+<hr>
+
+<article id="territorio-vago">
+
+  <dl>
+    <dt>Exposição</dt>
+    <dd>«Território Vago», colectiva, 23 artistas</dd>
+    <dt>Local</dt>
+    <dd>Museu de Serralves, Porto</dd>
+    <dt>Visto</dt>
+    <dd><time datetime="2026-02-02">2 de Fevereiro de 2026</time></dd>
+  </dl>
+
+  <h2>A arte de não dizer nada, com verba</h2>
+
+  <p><em>Vinte e três artistas, quatro pisos, e uma tese que nunca chega.</em></p>
+
+  <p>Uma exposição colectiva é sempre um argumento disfarçado de lista. «Território Vago» inverte a fórmula: é uma lista disfarçada de argumento. O texto de sala fala em fronteira, deslocação, corpo e memória — as quatro palavras que, juntas, já não significam nada — e depois deixa vinte e três obras defenderem-se sozinhas.</p>
+
+  <p>Algumas defendem-se bem. A série de fotografias de Marta Sá, feita ao longo de sete anos na fronteira seca junto a Barrancos, tem uma paciência que o resto da exposição não acompanha. São imagens de estradas que não vão a lado nenhum, tiradas sempre à mesma hora, e o efeito acumulado é o de um lugar a esvaziar-se em tempo real. Bastavam-lhe duas salas e a exposição teria uma espinha.</p>
+
+  <p>Mas depois há o terceiro piso, onde a curadoria desiste. Vídeos de dez minutos em salas sem bancos, instalações que precisavam do dobro do espaço, e duas ou três peças notoriamente incluídas por razões que não são as das obras. Nada disto é escandaloso. É apenas cansado — e o cansaço, num museu com estes meios, é uma escolha.</p>
+
+  <p>O problema de fundo não é a qualidade individual das peças. É a ausência de risco institucional. Serralves tem as condições para propor uma tese e defendê-la contra quem discorde; optou por não propor nenhuma. Sai-se com a impressão de ter atravessado um inventário muito bem iluminado.</p>
+
+  <p><small><a href="#top">↑ Índice</a></small></p>
+
+</article>
+
+<hr>
+
+<article id="ruido-branco">
+
+  <dl>
+    <dt>Concerto</dt>
+    <dd>Sons da Casa — Ensemble Contemporâneo</dd>
+    <dt>Local</dt>
+    <dd>Casa da Música, Sala Suggia, Porto</dd>
+    <dt>Visto</dt>
+    <dd><time datetime="2026-01-21">21 de Janeiro de 2026</time></dd>
+  </dl>
+
+  <h2>Ruído branco, sala cheia</h2>
+
+  <p><em>Uma estreia portuguesa que a acústica engoliu.</em></p>
+
+  <p>A Sala Suggia é um instrumento difícil. Perdoa pouco às dinâmicas baixas e amplifica quase tudo o que está acima do <em>mezzo-forte</em>, o que faz dela um espaço generoso para a orquestra romântica e cruel para uma boa parte do resto. Na quarta-feira, foi cruel.</p>
+
+  <p>A obra em estreia — «Interferências», de Joana Vilar — é construída sobre um plano de ruído contínuo, quase inaudível, sobre o qual entram fragmentos de metais em intervalos irregulares. Em disco, imagino que funcione. Ali, o plano de fundo desapareceu por completo nas primeiras filas e transformou-se num zumbido difuso nas últimas. Restaram os fragmentos, sem aquilo contra o qual deviam ser ouvidos. É como ouvir pontuação sem frase.</p>
+
+  <p>Não é justo culpar a compositora por uma sala. É justo perguntar por que razão a instituição programa uma peça destas naquele espaço, quando tem no mesmo edifício outro que a serviria melhor. A resposta óbvia é a bilheteira, e a resposta óbvia é normalmente a verdadeira.</p>
+
+  <p>O resto do programa correu como se esperava. O Ligeti soou bem, como o Ligeti costuma soar em salas que não perdoam — a escrita já conta com a resistência do espaço. Mas o que ficou por ouvir foi exactamente aquilo que fomos lá ouvir, e nenhum programa se salva por aquilo que já se conhecia.</p>
+
+  <p><small><a href="#top">↑ Índice</a></small></p>
+
+</article>
+
+<hr>
+
+<article id="contra-o-arquivo">
+
+  <dl>
+    <dt>Sessão</dt>
+    <dd>Ciclo «O Cinema Antes do Fim»</dd>
+    <dt>Local</dt>
+    <dd>Cinemateca Portuguesa, Sala Luís de Pina, Lisboa</dd>
+    <dt>Visto</dt>
+    <dd><time datetime="2025-12-08">8 de Dezembro de 2025</time></dd>
+  </dl>
+
+  <h2>Contra o arquivo, com o arquivo</h2>
+
+  <p><em>Restaurar é uma decisão editorial. Convém dizê-lo.</em></p>
+
+  <p>Há uma ideia confortável segundo a qual restaurar um filme é devolvê-lo ao que era. Não é. Restaurar é escolher — que negativo, que densidade, que cor, que grão se considera sujidade e que grão se considera obra — e cada escolha é uma leitura. A Cinemateca sabe-o melhor do que quase toda a gente, e a sessão desta semana teve a honestidade de o mostrar em vez de o explicar.</p>
+
+  <p>Projectaram-se duas cópias do mesmo filme com quarenta minutos de intervalo: uma tiragem de 1974 e o restauro digital concluído no ano passado. A diferença não é subtil. O restauro é mais legível, mais estável e significativamente menos ameaçador. Os pretos abriram. O que era um interior sem fundo passou a ser um quarto com paredes, e um quarto com paredes é outra coisa.</p>
+
+  <p>Ninguém errou. A equipa trabalhou a partir do melhor material disponível e tomou decisões defensáveis, algumas delas inevitáveis. Mas a comparação lado a lado torna evidente aquilo que fica normalmente implícito: que a versão que passará a circular é uma interpretação, e que a outra deixará de existir excepto em salas como esta, com um projeccionista e trinta pessoas.</p>
+
+  <p>É por isso que a Cinemateca continua a ser necessária de um modo que nenhuma plataforma substitui. Não por conservar o passado — isso fazem-no muitos — mas por conservar as versões do passado que discordam entre si, e por as pôr na mesma tarde, uma a seguir à outra, sem dizer qual está certa.</p>
+
+  <p><small><a href="#top">↑ Índice</a></small></p>
+
+</article>
+
+<hr>
+
+<article id="corpos-que-insistem">
+
+  <dl>
+    <dt>Espectáculo</dt>
+    <dd>«Repetição», coreografia de Diogo Faria</dd>
+    <dt>Local</dt>
+    <dd>Culturgest, Grande Auditório, Lisboa</dd>
+    <dt>Visto</dt>
+    <dd><time datetime="2025-11-19">19 de Novembro de 2025</time></dd>
+  </dl>
+
+  <h2>Corpos que insistem</h2>
+
+  <p><em>Cinquenta minutos de uma frase só. Funciona.</em></p>
+
+  <p>A proposta cabe numa linha: cinco intérpretes executam a mesma sequência de nove movimentos durante cinquenta minutos, sem pausa e sem variação declarada. Dito assim, parece um exercício de escola. Nos primeiros dez minutos, é.</p>
+
+  <p>Depois começa a acontecer outra coisa. Os corpos cansam-se a ritmos diferentes, e o cansaço introduz exactamente a variação que a coreografia se recusou a escrever. Uma intérprete atrasa-se meio tempo e nunca mais recupera; outro compensa e passa a chegar cedo. Ao fim de meia hora, a sequência ainda é reconhecível, mas já ninguém a partilha — e o que se vê deixou de ser uma frase para passar a ser cinco versões dela a afastarem-se.</p>
+
+  <p>Faria não sublinha nada disto. A luz é fixa, o som é um pulso que não muda, e não há um único momento em que a peça se explique. É uma confiança rara no público, e o público respondeu-lhe: à saída, quase ninguém falava, o que num grande auditório é sempre significativo.</p>
+
+  <p>Ficam dúvidas sobre a repetibilidade. Uma peça cujo material é o cansaço real depende de os intérpretes chegarem inteiros àquela noite, e depende também de o espectador aceitar um contrato que nunca lhe foi apresentado. Na quarta-feira, ambas as condições se verificaram. Não sei o que terá sido no sábado, e é por isso que digo qual das noites vi.</p>
+
+  <p><small><a href="#top">↑ Índice</a></small></p>
+
+</article>
+
+<hr>
+
+<section id="sobre">
+
+  <h2>Sobre</h2>
+
+  <p>QV é um registo de coisas que aconteceram.</p>
+
+  <p>Cada texto começa pela mesma informação: o que foi, onde foi, e em que dia foi visto. Essa linha não é um detalhe editorial — é o objecto. Não escrevemos sobre obras em abstracto; escrevemos sobre noites concretas, em salas concretas, com o público que lá estava.</p>
+
+  <p>Isto tem consequências. Significa que não publicamos a partir de material de imprensa, de ligações de visionamento ou de segundas mãos. Significa também que uma peça vista ao quinto dia não é a mesma que foi vista na estreia — e que dizemos qual delas vimos, para que se possa discordar com base em qualquer coisa.</p>
+
+  <p>Não há calendário de publicação. Não há classificações, estrelas nem notas. Não aceitamos convites que impliquem embargo sobre o que escrevemos, e quando um bilhete é oferecido dizemo-lo no próprio texto.</p>
+
+  <p>Correspondência: <a href="mailto:geral@queresviver.pt">geral@queresviver.pt</a></p>
+
+  <p><small><a href="#top">↑ Índice</a></small></p>
+
 </section>
 
-<!-- ═══ TEXTOS ═══════════════════════════════════════════════ -->
+<hr>
 
-<article class="text" id="gesto-por-concluir">
-  <dl class="record">
-    <div>
-      <dt>Espectáculo</dt>
-      <dd>Hamlet, encenação de Ana Ribeiro</dd>
-    </div>
-    <div>
-      <dt>Local</dt>
-      <dd>Teatro Nacional D. Maria II, Lisboa</dd>
-    </div>
-    <div>
-      <dt>Visto</dt>
-      <dd class="seen"><time datetime="2026-03-14">14.03.2026</time></dd>
-    </div>
-  </dl>
-
-  <h1>O gesto que ficou por concluir</h1>
-  <p class="standfirst">Ofélia não sai de cena — e a peça passa a ser outra.</p>
-
-  <div class="prose">
-    <p>Há uma decisão no último quarto de hora que reorganiza tudo o que veio antes. Ofélia não sai. Fica sentada no proscénio, de costas para a corte, enquanto a tragédia se cumpre atrás de si — e nem os actores nem a luz lhe reconhecem a presença. Durante onze minutos, o espectáculo tem duas frentes, e só uma delas sabe que está a ser vista.</p>
-
-    <p>É um risco, porque depende inteiramente de o público aguentar a ambiguidade. Ana Ribeiro não explica o dispositivo. Não há vídeo, não há voz <em>off</em>, não há nenhuma das muletas com que o teatro português dos últimos anos se habituou a sublinhar as próprias ideias. Há uma actriz sentada e há o resto. Quem quiser ler ali uma crítica à economia da atenção que a leia; quem preferir uma imagem de luto que fique com ela.</p>
-
-    <p>O que não funciona é a primeira hora. A tradução — nova, assinada pela encenadora — troca a densidade do verso por uma coloquialidade que envelhece depressa. «Ser ou não ser» transforma-se numa hesitação doméstica, e o monólogo perde o que tinha de vertigem. Ganha-se clareza, perde-se peso; a troca não compensa. Há momentos, sobretudo nas cenas com Polónio, em que a peça parece disposta a pedir desculpa por ser antiga.</p>
-
-    <p>Fica, ainda assim, a sensação rara de ter visto alguém arriscar alguma coisa. O gesto final não conclui — recusa-se a concluir — e é essa recusa que sobrevive à saída do teatro. Três dias depois, continuo a pensar naqueles onze minutos e em quase nada do que os precedeu.</p>
-  </div>
-
-  <footer class="text-footer"><a href="#indice">← Índice</a></footer>
-</article>
-
-
-<article class="text" id="territorio-vago">
-  <dl class="record">
-    <div>
-      <dt>Exposição</dt>
-      <dd>«Território Vago», colectiva, 23 artistas</dd>
-    </div>
-    <div>
-      <dt>Local</dt>
-      <dd>Museu de Serralves, Porto</dd>
-    </div>
-    <div>
-      <dt>Visto</dt>
-      <dd class="seen"><time datetime="2026-02-02">02.02.2026</time></dd>
-    </div>
-  </dl>
-
-  <h1>A arte de não dizer nada, com verba</h1>
-  <p class="standfirst">Vinte e três artistas, quatro pisos, e uma tese que nunca chega.</p>
-
-  <div class="prose">
-    <p>Uma exposição colectiva é sempre um argumento disfarçado de lista. «Território Vago» inverte a fórmula: é uma lista disfarçada de argumento. O texto de sala fala em fronteira, deslocação, corpo e memória — as quatro palavras que, juntas, já não significam nada — e depois deixa vinte e três obras defenderem-se sozinhas.</p>
-
-    <p>Algumas defendem-se bem. A série de fotografias de Marta Sá, feita ao longo de sete anos na fronteira seca junto a Barrancos, tem uma paciência que o resto da exposição não acompanha. São imagens de estradas que não vão a lado nenhum, tiradas sempre à mesma hora, e o efeito acumulado é o de um lugar a esvaziar-se em tempo real. Bastavam-lhe duas salas e a exposição teria uma espinha.</p>
-
-    <p>Mas depois há o terceiro piso, onde a curadoria desiste. Vídeos de dez minutos em salas sem bancos, instalações que precisavam do dobro do espaço, e duas ou três peças notoriamente incluídas por razões que não são as das obras. Nada disto é escandaloso. É apenas cansado — e o cansaço, num museu com estes meios, é uma escolha.</p>
-
-    <p>O problema de fundo não é a qualidade individual das peças. É a ausência de risco institucional. Serralves tem as condições para propor uma tese e defendê-la contra quem discorde; optou por não propor nenhuma. Sai-se com a impressão de ter atravessado um inventário muito bem iluminado.</p>
-  </div>
-
-  <footer class="text-footer"><a href="#indice">← Índice</a></footer>
-</article>
-
-
-<article class="text" id="ruido-branco">
-  <dl class="record">
-    <div>
-      <dt>Concerto</dt>
-      <dd>Sons da Casa — Ensemble Contemporâneo</dd>
-    </div>
-    <div>
-      <dt>Local</dt>
-      <dd>Casa da Música, Sala Suggia, Porto</dd>
-    </div>
-    <div>
-      <dt>Visto</dt>
-      <dd class="seen"><time datetime="2026-01-21">21.01.2026</time></dd>
-    </div>
-  </dl>
-
-  <h1>Ruído branco, sala cheia</h1>
-  <p class="standfirst">Uma estreia portuguesa que a acústica engoliu.</p>
-
-  <div class="prose">
-    <p>A Sala Suggia é um instrumento difícil. Perdoa pouco às dinâmicas baixas e amplifica quase tudo o que está acima do <em>mezzo-forte</em>, o que faz dela um espaço generoso para a orquestra romântica e cruel para uma boa parte do resto. Na quarta-feira, foi cruel.</p>
-
-    <p>A obra em estreia — «Interferências», de Joana Vilar — é construída sobre um plano de ruído contínuo, quase inaudível, sobre o qual entram fragmentos de metais em intervalos irregulares. Em disco, imagino que funcione. Ali, o plano de fundo desapareceu por completo nas primeiras filas e transformou-se num zumbido difuso nas últimas. Restaram os fragmentos, sem aquilo contra o qual deviam ser ouvidos. É como ouvir pontuação sem frase.</p>
-
-    <p>Não é justo culpar a compositora por uma sala. É justo perguntar por que razão a instituição programa uma peça destas naquele espaço, quando tem no mesmo edifício outro que a serviria melhor. A resposta óbvia é a bilheteira, e a resposta óbvia é normalmente a verdadeira.</p>
-
-    <p>O resto do programa correu como se esperava. O Ligeti soou bem, como o Ligeti costuma soar em salas que não perdoam — a escrita já conta com a resistência do espaço. Mas o que ficou por ouvir foi exactamente aquilo que fomos lá ouvir, e nenhum programa se salva por aquilo que já se conhecia.</p>
-  </div>
-
-  <footer class="text-footer"><a href="#indice">← Índice</a></footer>
-</article>
-
-
-<article class="text" id="contra-o-arquivo">
-  <dl class="record">
-    <div>
-      <dt>Sessão</dt>
-      <dd>Ciclo «O Cinema Antes do Fim»</dd>
-    </div>
-    <div>
-      <dt>Local</dt>
-      <dd>Cinemateca Portuguesa, Sala Luís de Pina, Lisboa</dd>
-    </div>
-    <div>
-      <dt>Visto</dt>
-      <dd class="seen"><time datetime="2025-12-08">08.12.2025</time></dd>
-    </div>
-  </dl>
-
-  <h1>Contra o arquivo, com o arquivo</h1>
-  <p class="standfirst">Restaurar é uma decisão editorial. Convém dizê-lo.</p>
-
-  <div class="prose">
-    <p>Há uma ideia confortável segundo a qual restaurar um filme é devolvê-lo ao que era. Não é. Restaurar é escolher — que negativo, que densidade, que cor, que grão se considera sujidade e que grão se considera obra — e cada escolha é uma leitura. A Cinemateca sabe-o melhor do que quase toda a gente, e a sessão desta semana teve a honestidade de o mostrar em vez de o explicar.</p>
-
-    <p>Projectaram-se duas cópias do mesmo filme com quarenta minutos de intervalo: uma tiragem de 1974 e o restauro digital concluído no ano passado. A diferença não é subtil. O restauro é mais legível, mais estável e significativamente menos ameaçador. Os pretos abriram. O que era um interior sem fundo passou a ser um quarto com paredes, e um quarto com paredes é outra coisa.</p>
-
-    <p>Ninguém errou. A equipa trabalhou a partir do melhor material disponível e tomou decisões defensáveis, algumas delas inevitáveis. Mas a comparação lado a lado torna evidente aquilo que fica normalmente implícito: que a versão que passará a circular é uma interpretação, e que a outra deixará de existir excepto em salas como esta, com um projeccionista e trinta pessoas.</p>
-
-    <p>É por isso que a Cinemateca continua a ser necessária de um modo que nenhuma plataforma substitui. Não por conservar o passado — isso fazem-no muitos — mas por conservar as versões do passado que discordam entre si, e por as pôr na mesma tarde, uma a seguir à outra, sem dizer qual está certa.</p>
-  </div>
-
-  <footer class="text-footer"><a href="#indice">← Índice</a></footer>
-</article>
-
-
-<article class="text" id="corpos-que-insistem">
-  <dl class="record">
-    <div>
-      <dt>Espectáculo</dt>
-      <dd>«Repetição», coreografia de Diogo Faria</dd>
-    </div>
-    <div>
-      <dt>Local</dt>
-      <dd>Culturgest, Grande Auditório, Lisboa</dd>
-    </div>
-    <div>
-      <dt>Visto</dt>
-      <dd class="seen"><time datetime="2025-11-19">19.11.2025</time></dd>
-    </div>
-  </dl>
-
-  <h1>Corpos que insistem</h1>
-  <p class="standfirst">Cinquenta minutos de uma frase só. Funciona.</p>
-
-  <div class="prose">
-    <p>A proposta cabe numa linha: cinco intérpretes executam a mesma sequência de nove movimentos durante cinquenta minutos, sem pausa e sem variação declarada. Dito assim, parece um exercício de escola. Nos primeiros dez minutos, é.</p>
-
-    <p>Depois começa a acontecer outra coisa. Os corpos cansam-se a ritmos diferentes, e o cansaço introduz exactamente a variação que a coreografia se recusou a escrever. Uma intérprete atrasa-se meio tempo e nunca mais recupera; outro compensa e passa a chegar cedo. Ao fim de meia hora, a sequência ainda é reconhecível, mas já ninguém a partilha — e o que se vê deixou de ser uma frase para passar a ser cinco versões dela a afastarem-se.</p>
-
-    <p>Faria não sublinha nada disto. A luz é fixa, o som é um pulso que não muda, e não há um único momento em que a peça se explique. É uma confiança rara no público, e o público respondeu-lhe: à saída, quase ninguém falava, o que num grande auditório é sempre significativo.</p>
-
-    <p>Ficam dúvidas sobre a repetibilidade. Uma peça cujo material é o cansaço real depende de os intérpretes chegarem inteiros àquela noite, e depende também de o espectador aceitar um contrato que nunca lhe foi apresentado. Na quarta-feira, ambas as condições se verificaram. Não sei o que terá sido no sábado, e é por isso que digo qual das noites vi.</p>
-  </div>
-
-  <footer class="text-footer"><a href="#indice">← Índice</a></footer>
-</article>
-
-
-<!-- ═══ SOBRE ════════════════════════════════════════════════ -->
-
-<section class="text" id="sobre">
-  <h1>Sobre</h1>
-  <p class="standfirst">QV é um registo de coisas que aconteceram.</p>
-
-  <div class="prose">
-    <p>Cada texto começa pela mesma informação: o que foi, onde foi, e em que dia foi visto. Essa linha não é um detalhe editorial — é o objecto. Não escrevemos sobre obras em abstracto; escrevemos sobre noites concretas, em salas concretas, com o público que lá estava.</p>
-
-    <p>Isto tem consequências. Significa que não publicamos a partir de material de imprensa, de ligações de visionamento ou de segundas mãos. Significa também que uma peça vista ao quinto dia não é a mesma que foi vista na estreia — e que dizemos qual delas vimos, para que se possa discordar com base em qualquer coisa.</p>
-
-    <p>Não há calendário de publicação. Não há classificações, estrelas nem notas. Não aceitamos convites que impliquem embargo sobre o que escrevemos, e quando um bilhete é oferecido dizemo-lo no próprio texto.</p>
-
-    <p>Correspondência: <a href="mailto:geral@queresviver.pt">geral@queresviver.pt</a></p>
-  </div>
-
-  <footer class="text-footer"><a href="#indice">← Índice</a></footer>
-</section>
-
-</main>
-
-<footer class="colophon">
-  QV — Queres Viver · Lisboa<br>
-  Composto em Literata e IBM Plex Mono
+<footer>
+  <p><small>QV — Queres Viver · Lisboa</small></p>
 </footer>
 
 </body>
