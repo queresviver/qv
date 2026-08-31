@@ -24,17 +24,18 @@ header, footer { text-align: center; }
 footer blockquote { margin-left: 0; margin-right: 0; }
 
 /* The phrase in every language the page carries, each one a link to that
-   language. Forty-six of them read as a single line running sideways rather
-   than a column that takes over a page of two sentences. The edges fade out,
+   language. Forty-six of them read as a short line running sideways, two or
+   three in view at a time, rather than a column that takes over a page of two
+   sentences. The edges fade out,
    which is what says the line continues past them; the scrollbar keeps its
    space but stays invisible until you point at it. On a touch screen there is
    no hover and no scrollbar - you push the line, and the fade still tells you
    that you can. tabindex makes it scrollable from the keyboard too. */
-.rep { overflow-x: auto; overscroll-behavior-x: contain; margin: 2em 0;
-       padding: 0.7em 0;
+.rep { max-width: 26em; overflow-x: auto; overscroll-behavior-x: contain;
+       margin: 2em auto; padding: 0.7em 0;
        border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
-       -webkit-mask-image: linear-gradient(to right, transparent, #000 3em, #000 calc(100% - 3em), transparent);
-               mask-image: linear-gradient(to right, transparent, #000 3em, #000 calc(100% - 3em), transparent);
+       -webkit-mask-image: linear-gradient(to right, transparent, #000 1.5em, #000 calc(100% - 1.5em), transparent);
+               mask-image: linear-gradient(to right, transparent, #000 1.5em, #000 calc(100% - 1.5em), transparent);
        scrollbar-width: thin; scrollbar-color: transparent transparent; }
 .rep:hover, .rep:focus-within { scrollbar-color: #bbb transparent; }
 .rep::-webkit-scrollbar { height: 6px; }
@@ -42,7 +43,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
        transition: background 0.25s; }
 .rep:hover::-webkit-scrollbar-thumb,
 .rep:focus-within::-webkit-scrollbar-thumb { background: #bbb; }
-.rep ul { display: flex; list-style: none; padding: 0 3em; margin: 0; }
+.rep ul { display: flex; list-style: none; padding: 0 1.5em; margin: 0; }
 .rep li { flex: 0 0 auto; white-space: nowrap; direction: ltr; }
 /* The separator sits between phrases, never before the first. Isolating each
    phrase keeps the Arabic, Urdu and Pashto ones reading right to left without
