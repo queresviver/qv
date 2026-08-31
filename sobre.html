@@ -22,6 +22,39 @@ body { background: #FFFFE0; overflow-wrap: break-word; }
 img { max-width: 100%; height: auto; }
 header, footer { text-align: center; }
 footer blockquote { margin-left: 0; margin-right: 0; }
+
+/* The one decorative thing on the site: click the phrase and it opens in
+   every language the page is written in. <details> is native HTML, so this
+   needs no JavaScript; the stagger is a CSS animation, switched off for
+   anyone who has asked for reduced motion. */
+.rep { text-align: center; margin: 2em 0; }
+.rep summary { cursor: pointer; font-style: italic; }
+.rep ul { list-style: none; padding: 0; margin: 1.2em 0 0; }
+.rep li { display: inline-block; margin: 0.4em 0.9em; }
+.rep[open] li { animation: qv-pop 0.5s cubic-bezier(.2,.8,.3,1.4) both; }
+@keyframes qv-pop { from { opacity: 0; transform: scale(0.3); }
+                    to   { opacity: 1; transform: none; } }
+.rep li:nth-child(1) { animation-delay: 0ms; }
+.rep li:nth-child(2) { animation-delay: 45ms; }
+.rep li:nth-child(3) { animation-delay: 90ms; }
+.rep li:nth-child(4) { animation-delay: 135ms; }
+.rep li:nth-child(5) { animation-delay: 180ms; }
+.rep li:nth-child(6) { animation-delay: 225ms; }
+.rep li:nth-child(7) { animation-delay: 270ms; }
+.rep li:nth-child(8) { animation-delay: 315ms; }
+.rep li:nth-child(9) { animation-delay: 360ms; }
+.rep li:nth-child(10) { animation-delay: 405ms; }
+.rep li:nth-child(11) { animation-delay: 450ms; }
+.rep li:nth-child(12) { animation-delay: 495ms; }
+.rep li:nth-child(13) { animation-delay: 540ms; }
+.rep li:nth-child(14) { animation-delay: 585ms; }
+.rep li:nth-child(15) { animation-delay: 630ms; }
+.rep li:nth-child(16) { animation-delay: 675ms; }
+.rep li:nth-child(17) { animation-delay: 720ms; }
+.rep li:nth-child(18) { animation-delay: 765ms; }
+.rep li:nth-child(19) { animation-delay: 810ms; }
+.rep li:nth-child(20) { animation-delay: 855ms; }
+@media (prefers-reduced-motion: reduce) { .rep[open] li { animation: none; } }
 </style>
 </head>
 
@@ -39,11 +72,40 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
+<details class="rep">
+
+  <summary>a eterna reportagem</summary>
+
+  <ul>
+    <li lang="pt-PT">a eterna reportagem</li>
+    <li lang="en">eternal reportage</li>
+    <li lang="fr">le reportage éternel</li>
+    <li lang="it">l’eterno reportage</li>
+    <li lang="es">el reportaje eterno</li>
+    <li lang="nl">de eeuwige reportage</li>
+    <li lang="de">die ewige Reportage</li>
+    <li lang="pl">wieczny reportaż</li>
+    <li lang="ro">reportajul etern</li>
+    <li lang="el">το αιώνιο ρεπορτάζ</li>
+    <li lang="ca">el reportatge etern</li>
+    <li lang="ru">вечный репортаж</li>
+    <li lang="tr">ebedî röportaj</li>
+    <li lang="fi">ikuinen reportaasi</li>
+    <li lang="ja">永遠のルポルタージュ</li>
+    <li lang="ko">영원한 르포르타주</li>
+    <li lang="zh-Hans">永恒的报道</li>
+    <li lang="vi">phóng sự vĩnh cửu</li>
+    <li lang="am">ዘላለማዊ ዘገባ</li>
+    <li lang="ar" dir="rtl">التحقيق الصحفي الأبدي</li>
+  </ul>
+
+</details>
+
+<hr>
+
 <section lang="pt-PT">
 
   <h2>Sobre</h2>
-
-  <p>A QV compromete-se a praticar a eterna reportagem, pelo caminho produzindo ensaios e documentação crucial sobre e para acontecimentos dignos de provocar vontade de viver.</p>
 
   <p>A QV é uma plataforma de reportagem, investigação e criação. Escrevemos sobre festivais, espectáculos, exposições, cidades, noites, dias, árvores e rios.</p>
 
@@ -57,8 +119,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>About</h2>
 
-  <p>QV commits itself to the practice of eternal reportage, producing along the way essays and crucial documentation on and for events worthy of provoking the will to live.</p>
-
   <p>QV is a platform for reportage, investigation and creation. We write about festivals, performances, exhibitions, cities, nights, days, trees and rivers.</p>
 
   <p>We have published in Portuguese, English and Dutch.</p>
@@ -70,8 +130,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="fr">
 
   <h2>À propos</h2>
-
-  <p>La QV s’engage à pratiquer le reportage éternel, produisant en chemin des essais et une documentation cruciale sur et pour des événements dignes de provoquer l’envie de vivre.</p>
 
   <p>La QV est une plateforme de reportage, d’investigation et de création. Nous écrivons sur des festivals, des spectacles, des expositions, des villes, des nuits, des jours, des arbres et des rivières.</p>
 
@@ -85,8 +143,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>Chi siamo</h2>
 
-  <p>La QV si impegna a praticare l’eterno reportage, producendo lungo il cammino saggi e documentazione cruciale su e per eventi degni di provocare la voglia di vivere.</p>
-
   <p>La QV è una piattaforma di reportage, ricerca e creazione. Scriviamo di festival, spettacoli, mostre, città, notti, giorni, alberi e fiumi.</p>
 
   <p>Abbiamo pubblicato in portoghese, inglese e olandese.</p>
@@ -98,8 +154,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="es">
 
   <h2>Quiénes somos</h2>
-
-  <p>QV se compromete a practicar el reportaje eterno, produciendo por el camino ensayos y documentación crucial sobre y para acontecimientos dignos de provocar ganas de vivir.</p>
 
   <p>QV es una plataforma de reportaje, investigación y creación. Escribimos sobre festivales, espectáculos, exposiciones, ciudades, noches, días, árboles y ríos.</p>
 
@@ -113,8 +167,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>Over ons</h2>
 
-  <p>QV verbindt zich ertoe de eeuwige reportage te beoefenen en produceert onderweg essays en cruciale documentatie over en voor gebeurtenissen die het waard zijn de levenslust op te wekken.</p>
-
   <p>QV is een platform voor reportage, onderzoek en creatie. Wij schrijven over festivals, voorstellingen, tentoonstellingen, steden, nachten, dagen, bomen en rivieren.</p>
 
   <p>Wij hebben gepubliceerd in het Portugees, Engels en Nederlands.</p>
@@ -126,8 +178,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="ja">
 
   <h2>QVについて</h2>
-
-  <p>QVは永遠のルポルタージュを実践することを約束し、その道すがら、生きる意欲を掻き立てるに値する出来事について、またそのために、エッセイと重要な記録を生み出します。</p>
 
   <p>QVはルポルタージュ、調査、創作のためのプラットフォームです。フェスティバル、公演、展覧会、都市、夜、昼、樹木、河川について書いています。</p>
 
@@ -141,8 +191,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>소개</h2>
 
-  <p>QV는 영원한 르포르타주의 실천을 다짐하며, 그 길 위에서 살고자 하는 의지를 불러일으킬 만한 사건들에 대하여, 그리고 그 사건들을 위하여 에세이와 중요한 기록을 생산합니다.</p>
-
   <p>QV는 르포르타주와 탐사, 창작을 위한 플랫폼입니다. 우리는 페스티벌, 공연, 전시, 도시, 밤, 낮, 나무, 강에 대해 씁니다.</p>
 
   <p>우리는 포르투갈어, 영어, 네덜란드어로 발표해 왔습니다.</p>
@@ -154,8 +202,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="zh-Hans">
 
   <h2>关于</h2>
-
-  <p>QV 致力于实践永恒的报道，一路上为那些值得激起求生意志的事件，撰写随笔与重要的记录。</p>
 
   <p>QV 是一个报道、调查与创作的平台。我们书写节庆、演出、展览、城市、夜晚、白昼、树木与河流。</p>
 
@@ -169,8 +215,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>ስለ እኛ</h2>
 
-  <p>ኪውቪ ዘላለማዊ ዘገባን ለመተግበር ቃል ገብቷል፤ በመንገዱም ላይ የመኖር ፍላጎትን ለማነሳሳት የሚገባቸውን ክስተቶች በተመለከተና ለእነሱ ሲል ድርሰቶችንና ወሳኝ ሰነዶችን ያዘጋጃል።</p>
-
   <p>ኪውቪ የዘገባ፣ የምርመራና የፈጠራ መድረክ ነው። ስለ ፌስቲቫሎች፣ ትርኢቶች፣ ኤግዚቢሽኖች፣ ከተሞች፣ ሌሊቶች፣ ቀናት፣ ዛፎችና ወንዞች እንጽፋለን።</p>
 
   <p>በፖርቱጋልኛ፣ በእንግሊዝኛና በደች ቋንቋ አሳትመናል።</p>
@@ -182,8 +226,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="de">
 
   <h2>Über uns</h2>
-
-  <p>Die QV verpflichtet sich zur Praxis der ewigen Reportage und produziert dabei Essays und wesentliche Dokumentation über und für Ereignisse, die es wert sind, den Lebenswillen zu wecken.</p>
 
   <p>Die QV ist eine Plattform für Reportage, Recherche und Schöpfung. Wir schreiben über Festivals, Aufführungen, Ausstellungen, Städte, Nächte, Tage, Bäume und Flüsse.</p>
 
@@ -197,8 +239,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>O nas</h2>
 
-  <p>QV zobowiązuje się do praktykowania wiecznego reportażu, tworząc po drodze eseje i kluczową dokumentację o wydarzeniach godnych wzbudzenia woli życia — i dla nich.</p>
-
   <p>QV jest platformą reportażu, śledztwa i twórczości. Piszemy o festiwalach, spektaklach, wystawach, miastach, nocach, dniach, drzewach i rzekach.</p>
 
   <p>Publikowaliśmy po portugalsku, angielsku i niderlandzku.</p>
@@ -210,8 +250,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="ro">
 
   <h2>Despre noi</h2>
-
-  <p>QV se angajează să practice reportajul etern, producând pe drum eseuri și documentare crucială despre și pentru evenimente demne să stârnească dorința de a trăi.</p>
 
   <p>QV este o platformă de reportaj, investigație și creație. Scriem despre festivaluri, spectacole, expoziții, orașe, nopți, zile, copaci și râuri.</p>
 
@@ -225,8 +263,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>Σχετικά</h2>
 
-  <p>Η QV δεσμεύεται να ασκεί το αιώνιο ρεπορτάζ, παράγοντας στον δρόμο δοκίμια και κρίσιμη τεκμηρίωση για γεγονότα άξια να προκαλέσουν τη θέληση για ζωή.</p>
-
   <p>Η QV είναι μια πλατφόρμα ρεπορτάζ, έρευνας και δημιουργίας. Γράφουμε για φεστιβάλ, παραστάσεις, εκθέσεις, πόλεις, νύχτες, μέρες, δέντρα και ποτάμια.</p>
 
   <p>Έχουμε δημοσιεύσει στα πορτογαλικά, στα αγγλικά και στα ολλανδικά.</p>
@@ -238,8 +274,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="ca">
 
   <h2>Qui som</h2>
-
-  <p>La QV es compromet a practicar el reportatge etern, produint pel camí assaigs i documentació crucial sobre i per a esdeveniments dignes de provocar ganes de viure.</p>
 
   <p>La QV és una plataforma de reportatge, investigació i creació. Escrivim sobre festivals, espectacles, exposicions, ciutats, nits, dies, arbres i rius.</p>
 
@@ -253,8 +287,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>О нас</h2>
 
-  <p>QV обязуется практиковать вечный репортаж, создавая по пути эссе и важнейшую документацию о событиях, достойных пробудить волю к жизни, и для них.</p>
-
   <p>QV — это платформа репортажа, расследования и созидания. Мы пишем о фестивалях, спектаклях, выставках, городах, ночах, днях, деревьях и реках.</p>
 
   <p>Мы публиковались на португальском, английском и нидерландском.</p>
@@ -266,8 +298,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="tr">
 
   <h2>Hakkımızda</h2>
-
-  <p>QV, ebedî röportajı uygulamayı taahhüt eder; bu yolda yaşama isteği uyandırmaya değer olaylar hakkında ve onlar için denemeler ve önemli belgeler üretir.</p>
 
   <p>QV bir röportaj, araştırma ve yaratım platformudur. Festivaller, gösteriler, sergiler, şehirler, geceler, gündüzler, ağaçlar ve nehirler hakkında yazıyoruz.</p>
 
@@ -281,8 +311,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>Tietoa meistä</h2>
 
-  <p>QV sitoutuu harjoittamaan ikuista reportaasia ja tuottaa matkan varrella esseitä ja olennaista dokumentaatiota tapahtumista, jotka ansaitsevat herättää elämänhalun.</p>
-
   <p>QV on reportaasin, tutkimuksen ja luomisen alusta. Kirjoitamme festivaaleista, esityksistä, näyttelyistä, kaupungeista, öistä, päivistä, puista ja joista.</p>
 
   <p>Olemme julkaisseet portugaliksi, englanniksi ja hollanniksi.</p>
@@ -295,8 +323,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
   <h2>Giới thiệu</h2>
 
-  <p>QV cam kết thực hành phóng sự vĩnh cửu, trên đường đi tạo ra những tiểu luận và tư liệu thiết yếu về và cho những sự kiện xứng đáng khơi dậy ý chí sống.</p>
-
   <p>QV là một nền tảng của phóng sự, điều tra và sáng tạo. Chúng tôi viết về các liên hoan, buổi diễn, triển lãm, thành phố, đêm, ngày, cây cối và những dòng sông.</p>
 
   <p>Chúng tôi đã xuất bản bằng tiếng Bồ Đào Nha, tiếng Anh và tiếng Hà Lan.</p>
@@ -308,8 +334,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 <section lang="ar" dir="rtl">
 
   <h2>من نحن</h2>
-
-  <p>تلتزم QV بممارسة التحقيق الصحفي الأبدي، منتجةً في طريقها مقالاتٍ وتوثيقاً جوهرياً عن أحداثٍ جديرةٍ بإيقاظ إرادة الحياة، ومن أجلها.</p>
 
   <p>QV منصّةٌ للتحقيق الصحفي والبحث والإبداع. نكتب عن المهرجانات والعروض والمعارض والمدن والليالي والأيام والأشجار والأنهار.</p>
 
