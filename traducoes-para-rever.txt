@@ -216,21 +216,21 @@ ORIGINAL (Português, da QV):
 [tr]  Türkçe
   título: Hakkımızda
   frase:  ebedî röportaj
-  p1:     QV bir röportaj, araştırma ve yaratım platformudur. Festivaller, gösteriler, sergiler, şehirler, geceler, gündüzler, ağaçlar ve nehirler hakkında yazıyoruz.
+  p1:     QV; röportaj, araştırma ve yaratım platformudur. Festivaller, gösteriler, sergiler, şehirler, geceler, gündüzler, ağaçlar ve nehirler hakkında yazıyoruz.
   p2:     Portekizce, İngilizce ve Felemenkçe yayımladık.
   correcção: ______________________________________________
 
 [kk]  Қазақша
   título: Біз туралы
   frase:  мәңгілік репортаж
-  p1:     QV — репортаж, зерттеу және шығармашылық алаңы. Біз фестивальдер, қойылымдар, көрмелер, қалалар, түндер, күндер, ағаштар мен өзендер туралы жазамыз.
+  p1:     QV — репортаж, зерттеу және шығармашылық платформасы. Біз фестивальдер, қойылымдар, көрмелер, қалалар, түндер, күндер, ағаштар мен өзендер туралы жазамыз.
   p2:     Біз португал, ағылшын және голланд тілдерінде жарияладық.
   correcção: ______________________________________________
 
 [ky]  Кыргызча
   título: Биз жөнүндө
   frase:  түбөлүк репортаж
-  p1:     QV — репортаж, изилдөө жана чыгармачылык аянтчасы. Биз фестивалдар, спектаклдер, көргөзмөлөр, шаарлар, түндөр, күндөр, дарактар жана дарыялар жөнүндө жазабыз.
+  p1:     QV — репортаж, изилдөө жана чыгармачылык платформасы. Биз фестивалдар, спектаклдер, көргөзмөлөр, шаарлар, түндөр, күндөр, дарактар жана дарыялар жөнүндө жазабыз.
   p2:     Португал, англис жана голланд тилдеринде жарыялаганбыз.
   correcção: ______________________________________________
 
@@ -244,7 +244,7 @@ ORIGINAL (Português, da QV):
 [tk]  Türkmençe
   título: Biz hakda
   frase:  baky reportaž
-  p1:     QV — reportaž, derňew we döredijilik meýdançasy. Biz festiwallar, sahna oýunlary, sergiler, şäherler, gijeler, günler, agaçlar we derýalar hakda ýazýarys.
+  p1:     QV — reportaž, derňew we döredijilik platformasydyr. Biz festiwallar, sahna oýunlary, sergiler, şäherler, gijeler, günler, agaçlar we derýalar hakda ýazýarys.
   p2:     Portugal, iňlis we golland dillerinde çap etdik.
   correcção: ______________________________________________
 
@@ -286,8 +286,8 @@ ORIGINAL (Português, da QV):
 [am]  አማርኛ
   título: ስለ እኛ
   frase:  ዘላለማዊ ዘገባ
-  p1:     ኪውቪ የዘገባ፣ የምርመራና የፈጠራ መድረክ ነው። ስለ ፌስቲቫሎች፣ ትርኢቶች፣ ኤግዚቢሽኖች፣ ከተሞች፣ ሌሊቶች፣ ቀናት፣ ዛፎችና ወንዞች እንጽፋለን።
-  p2:     በፖርቱጋልኛ፣ በእንግሊዝኛና በደች ቋንቋ አሳትመናል።
+  p1:     QV የዘገባ፣ የምርመራና የፈጠራ መድረክ ነው። ስለ ፌስቲቫሎች፣ ትርኢቶች፣ ኤግዚቢሽኖች፣ ከተሞች፣ ሌሊቶች፣ ቀናት፣ ዛፎችና ወንዞች እንጽፋለን።
+  p2:     በፖርቱጋልኛ፣ በእንግሊዝኛና በደችኛ አሳትመናል።
   correcção: ______________________________________________
 
 [zh]  中文
