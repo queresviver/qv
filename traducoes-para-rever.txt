@@ -52,7 +52,7 @@ ORIGINAL (Português, da QV):
   p2:     Publicamos en portugués, inglés y holandés.
   correcção: ______________________________________________
 
-[oc]  Occitan (aranés)
+[oc]  Aranés
   título: A prepaus de nosautres
   frase:  lo reportatge etèrn
   p1:     QV es una plataforma de reportatge, investigacion e creacion. Escrivèm sus festivals, espectacles, exposicions, ciutats, nuèches, jorns, arbres e rius.
@@ -197,6 +197,13 @@ ORIGINAL (Português, da QV):
   frase:  το αιώνιο ρεπορτάζ
   p1:     Η QV είναι μια πλατφόρμα ρεπορτάζ, έρευνας και δημιουργίας. Γράφουμε για φεστιβάλ, παραστάσεις, εκθέσεις, πόλεις, νύχτες, μέρες, δέντρα και ποτάμια.
   p2:     Έχουμε δημοσιεύσει στα πορτογαλικά, στα αγγλικά και στα ολλανδικά.
+  correcção: ______________________________________________
+
+[hy]  Հայերեն
+  título: Մեր մասին
+  frase:  հավերժական ռեպորտաժ
+  p1:     QV-ն ռեպորտաժի, հետազոտության և ստեղծագործության հարթակ է։ Մենք գրում ենք փառատոների, ներկայացումների, ցուցահանդեսների, քաղաքների, գիշերների, ցերեկների, ծառերի և գետերի մասին։
+  p2:     Հրապարակել ենք պորտուգալերեն, անգլերեն և հոլանդերեն։
   correcção: ______________________________________________
 
 [hu]  Magyar
