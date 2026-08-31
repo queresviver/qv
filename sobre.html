@@ -23,39 +23,11 @@ img { max-width: 100%; height: auto; }
 header, footer { text-align: center; }
 footer blockquote { margin-left: 0; margin-right: 0; }
 
-/* The one decorative thing on the site: click the phrase and it opens in
-   every language the page is written in. <details> is native HTML, so this
-   needs no JavaScript; the stagger is a CSS animation, switched off for
-   anyone who has asked for reduced motion. */
+/* The phrase in every language the page carries, each one a link to that
+   language. Layout only - no animation. */
 .rep { text-align: center; margin: 2em 0; }
-.rep summary { cursor: pointer; font-style: italic; }
-.rep ul { list-style: none; padding: 0; margin: 1.2em 0 0; }
+.rep ul { list-style: none; padding: 0; margin: 0; }
 .rep li { display: inline-block; margin: 0.4em 0.9em; }
-.rep[open] li { animation: qv-pop 0.5s cubic-bezier(.2,.8,.3,1.4) both; }
-@keyframes qv-pop { from { opacity: 0; transform: scale(0.3); }
-                    to   { opacity: 1; transform: none; } }
-.rep li:nth-child(1) { animation-delay: 0ms; }
-.rep li:nth-child(2) { animation-delay: 45ms; }
-.rep li:nth-child(3) { animation-delay: 90ms; }
-.rep li:nth-child(4) { animation-delay: 135ms; }
-.rep li:nth-child(5) { animation-delay: 180ms; }
-.rep li:nth-child(6) { animation-delay: 225ms; }
-.rep li:nth-child(7) { animation-delay: 270ms; }
-.rep li:nth-child(8) { animation-delay: 315ms; }
-.rep li:nth-child(9) { animation-delay: 360ms; }
-.rep li:nth-child(10) { animation-delay: 405ms; }
-.rep li:nth-child(11) { animation-delay: 450ms; }
-.rep li:nth-child(12) { animation-delay: 495ms; }
-.rep li:nth-child(13) { animation-delay: 540ms; }
-.rep li:nth-child(14) { animation-delay: 585ms; }
-.rep li:nth-child(15) { animation-delay: 630ms; }
-.rep li:nth-child(16) { animation-delay: 675ms; }
-.rep li:nth-child(17) { animation-delay: 720ms; }
-.rep li:nth-child(18) { animation-delay: 765ms; }
-.rep li:nth-child(19) { animation-delay: 810ms; }
-.rep li:nth-child(20) { animation-delay: 855ms; }
-.rep li:nth-child(21) { animation-delay: 900ms; }
-@media (prefers-reduced-motion: reduce) { .rep[open] li { animation: none; } }
 </style>
 </head>
 
@@ -73,39 +45,37 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<details class="rep">
-
-  <summary>a eterna reportagem</summary>
+<nav class="rep">
 
   <ul>
-    <li lang="pt-PT">a eterna reportagem</li>
-    <li lang="en">eternal reportage</li>
-    <li lang="nl">de eeuwige reportage</li>
-    <li lang="es">el reportaje eterno</li>
-    <li lang="ca">el reportatge etern</li>
-    <li lang="fr">le reportage éternel</li>
-    <li lang="it">l’eterno reportage</li>
-    <li lang="ro">reportajul etern</li>
-    <li lang="de">die ewige Reportage</li>
-    <li lang="pl">wieczny reportaż</li>
-    <li lang="ru">вечный репортаж</li>
-    <li lang="el">το αιώνιο ρεπορτάζ</li>
-    <li lang="fi">ikuinen reportaasi</li>
-    <li lang="tr">ebedî röportaj</li>
-    <li lang="ar" dir="rtl">التحقيق الصحفي الأبدي</li>
-    <li lang="am">ዘላለማዊ ዘገባ</li>
-    <li lang="ne">शाश्वत रिपोर्ताज</li>
-    <li lang="zh-Hans">永恒的报道</li>
-    <li lang="ja">永遠のルポルタージュ</li>
-    <li lang="ko">영원한 르포르타주</li>
-    <li lang="vi">phóng sự vĩnh cửu</li>
+    <li><a href="#pt" lang="pt-PT">a eterna reportagem</a></li>
+    <li><a href="#en" lang="en">eternal reportage</a></li>
+    <li><a href="#nl" lang="nl">de eeuwige reportage</a></li>
+    <li><a href="#es" lang="es">el reportaje eterno</a></li>
+    <li><a href="#ca" lang="ca">el reportatge etern</a></li>
+    <li><a href="#fr" lang="fr">le reportage éternel</a></li>
+    <li><a href="#it" lang="it">l’eterno reportage</a></li>
+    <li><a href="#ro" lang="ro">reportajul etern</a></li>
+    <li><a href="#de" lang="de">die ewige Reportage</a></li>
+    <li><a href="#pl" lang="pl">wieczny reportaż</a></li>
+    <li><a href="#ru" lang="ru">вечный репортаж</a></li>
+    <li><a href="#el" lang="el">το αιώνιο ρεπορτάζ</a></li>
+    <li><a href="#fi" lang="fi">ikuinen reportaasi</a></li>
+    <li><a href="#tr" lang="tr">ebedî röportaj</a></li>
+    <li><a href="#ar" lang="ar" dir="rtl">التحقيق الصحفي الأبدي</a></li>
+    <li><a href="#am" lang="am">ዘላለማዊ ዘገባ</a></li>
+    <li><a href="#ne" lang="ne">शाश्वत रिपोर्ताज</a></li>
+    <li><a href="#zh" lang="zh-Hans">永恒的报道</a></li>
+    <li><a href="#ja" lang="ja">永遠のルポルタージュ</a></li>
+    <li><a href="#ko" lang="ko">영원한 르포르타주</a></li>
+    <li><a href="#vi" lang="vi">phóng sự vĩnh cửu</a></li>
   </ul>
 
-</details>
+</nav>
 
 <hr>
 
-<section lang="pt-PT">
+<section id="pt" lang="pt-PT">
 
   <h2>Sobre</h2>
 
@@ -117,7 +87,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="en">
+<section id="en" lang="en">
 
   <h2>About</h2>
 
@@ -129,7 +99,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="nl">
+<section id="nl" lang="nl">
 
   <h2>Over ons</h2>
 
@@ -141,7 +111,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="es">
+<section id="es" lang="es">
 
   <h2>Quiénes somos</h2>
 
@@ -153,7 +123,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="ca">
+<section id="ca" lang="ca">
 
   <h2>Qui som</h2>
 
@@ -165,7 +135,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="fr">
+<section id="fr" lang="fr">
 
   <h2>À propos</h2>
 
@@ -177,7 +147,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="it">
+<section id="it" lang="it">
 
   <h2>Chi siamo</h2>
 
@@ -189,7 +159,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="ro">
+<section id="ro" lang="ro">
 
   <h2>Despre noi</h2>
 
@@ -201,7 +171,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="de">
+<section id="de" lang="de">
 
   <h2>Über uns</h2>
 
@@ -213,7 +183,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="pl">
+<section id="pl" lang="pl">
 
   <h2>O nas</h2>
 
@@ -225,7 +195,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="ru">
+<section id="ru" lang="ru">
 
   <h2>О нас</h2>
 
@@ -237,7 +207,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="el">
+<section id="el" lang="el">
 
   <h2>Σχετικά</h2>
 
@@ -249,7 +219,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="fi">
+<section id="fi" lang="fi">
 
   <h2>Tietoa meistä</h2>
 
@@ -261,7 +231,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="tr">
+<section id="tr" lang="tr">
 
   <h2>Hakkımızda</h2>
 
@@ -273,7 +243,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="ar" dir="rtl">
+<section id="ar" lang="ar" dir="rtl">
 
   <h2>من نحن</h2>
 
@@ -285,7 +255,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="am">
+<section id="am" lang="am">
 
   <h2>ስለ እኛ</h2>
 
@@ -297,7 +267,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="ne">
+<section id="ne" lang="ne">
 
   <h2>हाम्रोबारे</h2>
 
@@ -309,7 +279,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="zh-Hans">
+<section id="zh" lang="zh-Hans">
 
   <h2>关于</h2>
 
@@ -321,7 +291,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="ja">
+<section id="ja" lang="ja">
 
   <h2>QVについて</h2>
 
@@ -333,7 +303,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="ko">
+<section id="ko" lang="ko">
 
   <h2>소개</h2>
 
@@ -345,7 +315,7 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 <hr>
 
-<section lang="vi">
+<section id="vi" lang="vi">
 
   <h2>Giới thiệu</h2>
 
