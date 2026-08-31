@@ -28,6 +28,12 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 .rep { text-align: center; margin: 2em 0; }
 .rep ul { list-style: none; padding: 0; margin: 0; }
 .rep li { display: inline-block; margin: 0.4em 0.9em; }
+
+/* One language at a time. :target is plain HTML anchoring - no JavaScript.
+   With nothing selected, Portuguese shows. */
+section[lang] { display: none; }
+section[lang]:target { display: block; }
+body:not(:has(section[lang]:target)) #pt { display: block; }
 </style>
 </head>
 
@@ -57,10 +63,19 @@ footer blockquote { margin-left: 0; margin-right: 0; }
     <li><a href="#it" lang="it">l’eterno reportage</a></li>
     <li><a href="#ro" lang="ro">reportajul etern</a></li>
     <li><a href="#de" lang="de">die ewige Reportage</a></li>
+    <li><a href="#sv" lang="sv">det eviga reportaget</a></li>
+    <li><a href="#da" lang="da">den evige reportage</a></li>
+    <li><a href="#nb" lang="nb">den evige reportasjen</a></li>
+    <li><a href="#is" lang="is">hin eilífa fréttaskýring</a></li>
     <li><a href="#pl" lang="pl">wieczny reportaż</a></li>
+    <li><a href="#cs" lang="cs">věčná reportáž</a></li>
+    <li><a href="#sk" lang="sk">večná reportáž</a></li>
+    <li><a href="#sl" lang="sl">večna reportaža</a></li>
+    <li><a href="#hr" lang="hr">vječna reportaža</a></li>
     <li><a href="#ru" lang="ru">вечный репортаж</a></li>
-    <li><a href="#el" lang="el">το αιώνιο ρεπορτάζ</a></li>
+    <li><a href="#hu" lang="hu">az örök riport</a></li>
     <li><a href="#fi" lang="fi">ikuinen reportaasi</a></li>
+    <li><a href="#el" lang="el">το αιώνιο ρεπορτάζ</a></li>
     <li><a href="#tr" lang="tr">ebedî röportaj</a></li>
     <li><a href="#ar" lang="ar" dir="rtl">التحقيق الصحفي الأبدي</a></li>
     <li><a href="#am" lang="am">ዘላለማዊ ዘገባ</a></li>
@@ -85,8 +100,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="en" lang="en">
 
   <h2>About</h2>
@@ -96,8 +109,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
   <p>We have published in Portuguese, English and Dutch.</p>
 
 </section>
-
-<hr>
 
 <section id="nl" lang="nl">
 
@@ -109,8 +120,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="es" lang="es">
 
   <h2>Quiénes somos</h2>
@@ -120,8 +129,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
   <p>Hemos publicado en portugués, inglés y neerlandés.</p>
 
 </section>
-
-<hr>
 
 <section id="ca" lang="ca">
 
@@ -133,8 +140,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="fr" lang="fr">
 
   <h2>À propos</h2>
@@ -144,8 +149,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
   <p>Nous avons publié en portugais, en anglais et en néerlandais.</p>
 
 </section>
-
-<hr>
 
 <section id="it" lang="it">
 
@@ -157,8 +160,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="ro" lang="ro">
 
   <h2>Despre noi</h2>
@@ -168,8 +169,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
   <p>Am publicat în portugheză, engleză și neerlandeză.</p>
 
 </section>
-
-<hr>
 
 <section id="de" lang="de">
 
@@ -181,7 +180,45 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
+<section id="sv" lang="sv">
+
+  <h2>Om oss</h2>
+
+  <p>QV är en plattform för reportage, undersökning och skapande. Vi skriver om festivaler, föreställningar, utställningar, städer, nätter, dagar, träd och floder.</p>
+
+  <p>Vi har publicerat på portugisiska, engelska och nederländska.</p>
+
+</section>
+
+<section id="da" lang="da">
+
+  <h2>Om os</h2>
+
+  <p>QV er en platform for reportage, undersøgelse og skabelse. Vi skriver om festivaler, forestillinger, udstillinger, byer, nætter, dage, træer og floder.</p>
+
+  <p>Vi har udgivet på portugisisk, engelsk og nederlandsk.</p>
+
+</section>
+
+<section id="nb" lang="nb">
+
+  <h2>Om oss</h2>
+
+  <p>QV er en plattform for reportasje, undersøkelse og skaping. Vi skriver om festivaler, forestillinger, utstillinger, byer, netter, dager, trær og elver.</p>
+
+  <p>Vi har publisert på portugisisk, engelsk og nederlandsk.</p>
+
+</section>
+
+<section id="is" lang="is">
+
+  <h2>Um okkur</h2>
+
+  <p>QV er vettvangur fyrir fréttaskýringar, rannsóknir og sköpun. Við skrifum um hátíðir, sýningar, borgir, nætur, daga, tré og ár.</p>
+
+  <p>Við höfum birt á portúgölsku, ensku og hollensku.</p>
+
+</section>
 
 <section id="pl" lang="pl">
 
@@ -193,7 +230,45 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
+<section id="cs" lang="cs">
+
+  <h2>O nás</h2>
+
+  <p>QV je platforma reportáže, výzkumu a tvorby. Píšeme o festivalech, představeních, výstavách, městech, nocích, dnech, stromech a řekách.</p>
+
+  <p>Publikovali jsme v portugalštině, angličtině a nizozemštině.</p>
+
+</section>
+
+<section id="sk" lang="sk">
+
+  <h2>O nás</h2>
+
+  <p>QV je platforma reportáže, výskumu a tvorby. Píšeme o festivaloch, predstaveniach, výstavách, mestách, nociach, dňoch, stromoch a riekach.</p>
+
+  <p>Publikovali sme v portugalčine, angličtine a holandčine.</p>
+
+</section>
+
+<section id="sl" lang="sl">
+
+  <h2>O nas</h2>
+
+  <p>QV je platforma reportaže, raziskovanja in ustvarjanja. Pišemo o festivalih, predstavah, razstavah, mestih, nočeh, dnevih, drevesih in rekah.</p>
+
+  <p>Objavljali smo v portugalščini, angleščini in nizozemščini.</p>
+
+</section>
+
+<section id="hr" lang="hr">
+
+  <h2>O nama</h2>
+
+  <p>QV je platforma reportaže, istraživanja i stvaranja. Pišemo o festivalima, predstavama, izložbama, gradovima, noćima, danima, drveću i rijekama.</p>
+
+  <p>Objavljivali smo na portugalskom, engleskom i nizozemskom.</p>
+
+</section>
 
 <section id="ru" lang="ru">
 
@@ -205,19 +280,15 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
+<section id="hu" lang="hu">
 
-<section id="el" lang="el">
+  <h2>Rólunk</h2>
 
-  <h2>Σχετικά</h2>
+  <p>A QV riport, kutatás és alkotás platformja. Fesztiválokról, előadásokról, kiállításokról, városokról, éjszakákról, nappalokról, fákról és folyókról írunk.</p>
 
-  <p>Η QV είναι μια πλατφόρμα ρεπορτάζ, έρευνας και δημιουργίας. Γράφουμε για φεστιβάλ, παραστάσεις, εκθέσεις, πόλεις, νύχτες, μέρες, δέντρα και ποτάμια.</p>
-
-  <p>Έχουμε δημοσιεύσει στα πορτογαλικά, στα αγγλικά και στα ολλανδικά.</p>
+  <p>Portugálul, angolul és hollandul publikáltunk.</p>
 
 </section>
-
-<hr>
 
 <section id="fi" lang="fi">
 
@@ -229,7 +300,15 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
+<section id="el" lang="el">
+
+  <h2>Σχετικά</h2>
+
+  <p>Η QV είναι μια πλατφόρμα ρεπορτάζ, έρευνας και δημιουργίας. Γράφουμε για φεστιβάλ, παραστάσεις, εκθέσεις, πόλεις, νύχτες, μέρες, δέντρα και ποτάμια.</p>
+
+  <p>Έχουμε δημοσιεύσει στα πορτογαλικά, στα αγγλικά και στα ολλανδικά.</p>
+
+</section>
 
 <section id="tr" lang="tr">
 
@@ -241,8 +320,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="ar" lang="ar" dir="rtl">
 
   <h2>من نحن</h2>
@@ -252,8 +329,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
   <p>نشرنا بالبرتغالية والإنجليزية والهولندية.</p>
 
 </section>
-
-<hr>
 
 <section id="am" lang="am">
 
@@ -265,8 +340,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="ne" lang="ne">
 
   <h2>हाम्रोबारे</h2>
@@ -276,8 +349,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
   <p>हामीले पोर्चुगाली, अङ्ग्रेजी र डच भाषामा प्रकाशन गरेका छौं।</p>
 
 </section>
-
-<hr>
 
 <section id="zh" lang="zh-Hans">
 
@@ -289,8 +360,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="ja" lang="ja">
 
   <h2>QVについて</h2>
@@ -301,8 +370,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 
 </section>
 
-<hr>
-
 <section id="ko" lang="ko">
 
   <h2>소개</h2>
@@ -312,8 +379,6 @@ footer blockquote { margin-left: 0; margin-right: 0; }
   <p>우리는 포르투갈어, 영어, 네덜란드어로 발표해 왔습니다.</p>
 
 </section>
-
-<hr>
 
 <section id="vi" lang="vi">
 
