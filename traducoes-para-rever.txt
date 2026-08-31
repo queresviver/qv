@@ -1,0 +1,319 @@
+QV — sobre.html: texto para revisão / text for checking
+========================================================================
+
+ORIGINAL (Português, da QV):
+  frase:  a eterna reportagem
+  p1:     A QV é uma plataforma de reportagem, investigação e criação.
+          Escrevemos sobre festivais, espectáculos, exposições, cidades,
+          noites, dias, árvores e rios.
+  p2:     Temos publicado em Português, Inglês e Holandês.
+
+========================================================================
+
+[en]  English
+  título: About
+  frase:  eternal reportage
+  p1:     QV is a platform for reportage, investigation and creation. We write about festivals, performances, exhibitions, cities, nights, days, trees and rivers.
+  p2:     We have published in Portuguese, English and Dutch.
+  correcção: ______________________________________________
+
+[nl]  Nederlands
+  título: Over ons
+  frase:  de eeuwige reportage
+  p1:     QV is een platform voor reportage, onderzoek en creatie. Wij schrijven over festivals, voorstellingen, tentoonstellingen, steden, nachten, dagen, bomen en rivieren.
+  p2:     Wij hebben gepubliceerd in het Portugees, Engels en Nederlands.
+  correcção: ______________________________________________
+
+[es]  Español
+  título: Quiénes somos
+  frase:  el reportaje eterno
+  p1:     QV es una plataforma de reportaje, investigación y creación. Escribimos sobre festivales, espectáculos, exposiciones, ciudades, noches, días, árboles y ríos.
+  p2:     Hemos publicado en portugués, inglés y neerlandés.
+  correcção: ______________________________________________
+
+[ca]  Català
+  título: Qui som
+  frase:  el reportatge etern
+  p1:     La QV és una plataforma de reportatge, investigació i creació. Escrivim sobre festivals, espectacles, exposicions, ciutats, nits, dies, arbres i rius.
+  p2:     Hem publicat en portuguès, anglès i neerlandès.
+  correcção: ______________________________________________
+
+[gl]  Galego
+  título: Sobre nós
+  frase:  a eterna reportaxe
+  p1:     A QV é unha plataforma de reportaxe, investigación e creación. Escribimos sobre festivais, espectáculos, exposicións, cidades, noites, días, árbores e ríos.
+  p2:     Temos publicado en portugués, inglés e holandés.
+  correcção: ______________________________________________
+
+[ast]  Asturianu
+  título: Sobre nós
+  frase:  la eterna reportaxe
+  p1:     QV ye una plataforma de reportaxe, investigación y creación. Escribimos sobre festivales, espectáculos, esposiciones, ciudaes, nueches, díes, árboles y ríos.
+  p2:     Publicamos en portugués, inglés y holandés.
+  correcção: ______________________________________________
+
+[oc]  Occitan (aranés)
+  título: A prepaus de nosautres
+  frase:  lo reportatge etèrn
+  p1:     QV es una plataforma de reportatge, investigacion e creacion. Escrivèm sus festivals, espectacles, exposicions, ciutats, nuèches, jorns, arbres e rius.
+  p2:     Avèm publicat en portugués, anglés e neerlandés.
+  correcção: ______________________________________________
+
+[eu]  Euskara
+  título: Guri buruz
+  frase:  betiko erreportajea
+  p1:     QV erreportaje, ikerketa eta sorkuntzarako plataforma bat da. Jaialdiei, ikuskizunei, erakusketei, hiriei, gauei, egunei, zuhaitzei eta ibaiei buruz idazten dugu.
+  p2:     Portugesez, ingelesez eta nederlanderaz argitaratu dugu.
+  correcção: ______________________________________________
+
+[fr]  Français
+  título: À propos
+  frase:  le reportage éternel
+  p1:     La QV est une plateforme de reportage, d’investigation et de création. Nous écrivons sur des festivals, des spectacles, des expositions, des villes, des nuits, des jours, des arbres et des rivières.
+  p2:     Nous avons publié en portugais, en anglais et en néerlandais.
+  correcção: ______________________________________________
+
+[it]  Italiano
+  título: Chi siamo
+  frase:  l’eterno reportage
+  p1:     La QV è una piattaforma di reportage, inchiesta e creazione. Scriviamo di festival, spettacoli, mostre, città, notti, giorni, alberi e fiumi.
+  p2:     Abbiamo pubblicato in portoghese, inglese e olandese.
+  correcção: ______________________________________________
+
+[ro]  Română
+  título: Despre noi
+  frase:  reportajul etern
+  p1:     QV este o platformă de reportaj, investigație și creație. Scriem despre festivaluri, spectacole, expoziții, orașe, nopți, zile, copaci și râuri.
+  p2:     Am publicat în portugheză, engleză și neerlandeză.
+  correcção: ______________________________________________
+
+[de]  Deutsch
+  título: Über uns
+  frase:  die ewige Reportage
+  p1:     QV ist eine Plattform für Reportage, Recherche und Schaffen. Wir schreiben über Festivals, Aufführungen, Ausstellungen, Städte, Nächte, Tage, Bäume und Flüsse.
+  p2:     Wir haben auf Portugiesisch, Englisch und Niederländisch veröffentlicht.
+  correcção: ______________________________________________
+
+[sv]  Svenska
+  título: Om oss
+  frase:  det eviga reportaget
+  p1:     QV är en plattform för reportage, granskning och skapande. Vi skriver om festivaler, föreställningar, utställningar, städer, nätter, dagar, träd och floder.
+  p2:     Vi har publicerat på portugisiska, engelska och nederländska.
+  correcção: ______________________________________________
+
+[da]  Dansk
+  título: Om os
+  frase:  den evige reportage
+  p1:     QV er en platform for reportage, undersøgelse og skabelse. Vi skriver om festivaler, forestillinger, udstillinger, byer, nætter, dage, træer og floder.
+  p2:     Vi har udgivet på portugisisk, engelsk og nederlandsk.
+  correcção: ______________________________________________
+
+[nb]  Norsk
+  título: Om oss
+  frase:  den evige reportasjen
+  p1:     QV er en plattform for reportasje, undersøkelse og skaping. Vi skriver om festivaler, forestillinger, utstillinger, byer, netter, dager, trær og elver.
+  p2:     Vi har publisert på portugisisk, engelsk og nederlandsk.
+  correcção: ______________________________________________
+
+[pl]  Polski
+  título: O nas
+  frase:  wieczny reportaż
+  p1:     QV jest platformą reportażu, śledztwa i twórczości. Piszemy o festiwalach, spektaklach, wystawach, miastach, nocach, dniach, drzewach i rzekach.
+  p2:     Publikowaliśmy po portugalsku, angielsku i niderlandzku.
+  correcção: ______________________________________________
+
+[cs]  Čeština
+  título: O nás
+  frase:  věčná reportáž
+  p1:     QV je platforma reportáže, výzkumu a tvorby. Píšeme o festivalech, představeních, výstavách, městech, nocích, dnech, stromech a řekách.
+  p2:     Publikovali jsme v portugalštině, angličtině a nizozemštině.
+  correcção: ______________________________________________
+
+[sk]  Slovenčina
+  título: O nás
+  frase:  večná reportáž
+  p1:     QV je platforma reportáže, výskumu a tvorby. Píšeme o festivaloch, predstaveniach, výstavách, mestách, nociach, dňoch, stromoch a riekach.
+  p2:     Publikovali sme v portugalčine, angličtine a holandčine.
+  correcção: ______________________________________________
+
+[sl]  Slovenščina
+  título: O nas
+  frase:  večna reportaža
+  p1:     QV je platforma reportaže, raziskovanja in ustvarjanja. Pišemo o festivalih, predstavah, razstavah, mestih, nočeh, dnevih, drevesih in rekah.
+  p2:     Objavljali smo v portugalščini, angleščini in nizozemščini.
+  correcção: ______________________________________________
+
+[hr]  Hrvatski
+  título: O nama
+  frase:  vječna reportaža
+  p1:     QV je platforma reportaže, istraživanja i stvaranja. Pišemo o festivalima, predstavama, izložbama, gradovima, noćima, danima, drveću i rijekama.
+  p2:     Objavljivali smo na portugalskom, engleskom i nizozemskom.
+  correcção: ______________________________________________
+
+[bs]  Bosanski
+  título: O nama
+  frase:  vječna reportaža
+  p1:     QV je platforma reportaže, istraživanja i stvaranja. Pišemo o festivalima, predstavama, izložbama, gradovima, noćima, danima, drveću i rijekama.
+  p2:     Objavljivali smo na portugalskom, engleskom i holandskom.
+  correcção: ______________________________________________
+
+[sr]  Српски
+  título: О нама
+  frase:  вечна репортажа
+  p1:     QV је платформа репортаже, истраживања и стварања. Пишемо о фестивалима, представама, изложбама, градовима, ноћима, данима, дрвећу и рекама.
+  p2:     Објављивали смо на португалском, енглеском и холандском.
+  correcção: ______________________________________________
+
+[mk]  Македонски
+  título: За нас
+  frase:  вечната репортажа
+  p1:     QV е платформа за репортажа, истражување и творештво. Пишуваме за фестивали, претстави, изложби, градови, ноќи, денови, дрвја и реки.
+  p2:     Објавувавме на португалски, англиски и холандски.
+  correcção: ______________________________________________
+
+[bg]  Български
+  título: За нас
+  frase:  вечният репортаж
+  p1:     QV е платформа за репортаж, разследване и творчество. Пишем за фестивали, представления, изложби, градове, нощи, дни, дървета и реки.
+  p2:     Публикували сме на португалски, английски и нидерландски.
+  correcção: ______________________________________________
+
+[ru]  Русский
+  título: О нас
+  frase:  вечный репортаж
+  p1:     QV — это платформа репортажа, расследования и творчества. Мы пишем о фестивалях, спектаклях, выставках, городах, ночах, днях, деревьях и реках.
+  p2:     Мы публиковались на португальском, английском и нидерландском.
+  correcção: ______________________________________________
+
+[sq]  Shqip
+  título: Rreth nesh
+  frase:  reportazhi i përjetshëm
+  p1:     QV është një platformë reportazhi, hetimi dhe krijimi. Shkruajmë për festivale, shfaqje, ekspozita, qytete, netë, ditë, pemë dhe lumenj.
+  p2:     Kemi botuar në portugalisht, anglisht dhe holandisht.
+  correcção: ______________________________________________
+
+[el]  Ελληνικά
+  título: Σχετικά
+  frase:  το αιώνιο ρεπορτάζ
+  p1:     Η QV είναι μια πλατφόρμα ρεπορτάζ, έρευνας και δημιουργίας. Γράφουμε για φεστιβάλ, παραστάσεις, εκθέσεις, πόλεις, νύχτες, μέρες, δέντρα και ποτάμια.
+  p2:     Έχουμε δημοσιεύσει στα πορτογαλικά, στα αγγλικά και στα ολλανδικά.
+  correcção: ______________________________________________
+
+[hu]  Magyar
+  título: Rólunk
+  frase:  az örök riport
+  p1:     A QV riport, oknyomozás és alkotás platformja. Fesztiválokról, előadásokról, kiállításokról, városokról, éjszakákról, nappalokról, fákról és folyókról írunk.
+  p2:     Portugálul, angolul és hollandul publikáltunk.
+  correcção: ______________________________________________
+
+[fi]  Suomi
+  título: Tietoa meistä
+  frase:  ikuinen reportaasi
+  p1:     QV on reportaasin, tutkimuksen ja luomisen alusta. Kirjoitamme festivaaleista, esityksistä, näyttelyistä, kaupungeista, öistä, päivistä, puista ja joista.
+  p2:     Olemme julkaisseet portugaliksi, englanniksi ja hollanniksi.
+  correcção: ______________________________________________
+
+[tr]  Türkçe
+  título: Hakkımızda
+  frase:  ebedî röportaj
+  p1:     QV bir röportaj, araştırma ve yaratım platformudur. Festivaller, gösteriler, sergiler, şehirler, geceler, gündüzler, ağaçlar ve nehirler hakkında yazıyoruz.
+  p2:     Portekizce, İngilizce ve Felemenkçe yayımladık.
+  correcção: ______________________________________________
+
+[kk]  Қазақша
+  título: Біз туралы
+  frase:  мәңгілік репортаж
+  p1:     QV — репортаж, зерттеу және шығармашылық алаңы. Біз фестивальдер, қойылымдар, көрмелер, қалалар, түндер, күндер, ағаштар мен өзендер туралы жазамыз.
+  p2:     Біз португал, ағылшын және голланд тілдерінде жарияладық.
+  correcção: ______________________________________________
+
+[ky]  Кыргызча
+  título: Биз жөнүндө
+  frase:  түбөлүк репортаж
+  p1:     QV — репортаж, изилдөө жана чыгармачылык аянтчасы. Биз фестивалдар, спектаклдер, көргөзмөлөр, шаарлар, түндөр, күндөр, дарактар жана дарыялар жөнүндө жазабыз.
+  p2:     Португал, англис жана голланд тилдеринде жарыялаганбыз.
+  correcção: ______________________________________________
+
+[uz]  Oʻzbekcha
+  título: Biz haqimizda
+  frase:  abadiy reportaj
+  p1:     QV — reportaj, tadqiqot va ijod platformasi. Biz festivallar, spektakllar, koʻrgazmalar, shaharlar, tunlar, kunlar, daraxtlar va daryolar haqida yozamiz.
+  p2:     Portugal, ingliz va golland tillarida nashr qilganmiz.
+  correcção: ______________________________________________
+
+[tk]  Türkmençe
+  título: Biz hakda
+  frase:  baky reportaž
+  p1:     QV — reportaž, derňew we döredijilik meýdançasy. Biz festiwallar, sahna oýunlary, sergiler, şäherler, gijeler, günler, agaçlar we derýalar hakda ýazýarys.
+  p2:     Portugal, iňlis we golland dillerinde çap etdik.
+  correcção: ______________________________________________
+
+[tg]  Тоҷикӣ
+  título: Дар бораи мо
+  frase:  репортажи ҷовидон
+  p1:     QV — платформаи репортаж, тадқиқот ва эҷодкорӣ. Мо дар бораи ҷашнвораҳо, намоишҳо, намоишгоҳҳо, шаҳрҳо, шабҳо, рӯзҳо, дарахтон ва дарёҳо менависем.
+  p2:     Мо ба забонҳои португалӣ, англисӣ ва голландӣ нашр кардаем.
+  correcção: ______________________________________________
+
+[ne]  नेपाली
+  título: हाम्रोबारे
+  frase:  शाश्वत रिपोर्ताज
+  p1:     QV रिपोर्ताज, अनुसन्धान र सिर्जनाको एउटा मञ्च हो। हामी महोत्सवहरू, प्रस्तुतिहरू, प्रदर्शनीहरू, सहरहरू, रातहरू, दिनहरू, रूखहरू र नदीहरूका बारेमा लेख्छौं।
+  p2:     हामीले पोर्चुगाली, अङ्ग्रेजी र डच भाषामा प्रकाशन गरेका छौं।
+  correcção: ______________________________________________
+
+[ur]  اردو
+  título: ہمارے بارے میں
+  frase:  ابدی رپورتاژ
+  p1:     QV رپورتاژ، تحقیق اور تخلیق کا ایک پلیٹ فارم ہے۔ ہم میلوں، پرفارمنسز، نمائشوں، شہروں، راتوں، دنوں، درختوں اور دریاؤں کے بارے میں لکھتے ہیں۔
+  p2:     ہم نے پرتگالی، انگریزی اور ولندیزی میں شائع کیا ہے۔
+  correcção: ______________________________________________
+
+[ps]  پښتو
+  título: زموږ په اړه
+  frase:  ابدي راپورتاژ
+  p1:     QV د راپورتاژ، څېړنې او پنځونې پلټفارم دی. موږ د فېستیوالونو، نندارو، نندارتونونو، ښارونو، شپو، ورځو، ونو او سیندونو په اړه لیکو.
+  p2:     موږ په پرتګالي، انګلیسي او هالنډي ژبو خپاره کړي دي.
+  correcção: ______________________________________________
+
+[ar]  العربية
+  título: من نحن
+  frase:  الريبورتاج الأبدي
+  p1:     QV منصّةٌ للتحقيق الصحفي والبحث والإبداع. نكتب عن المهرجانات والعروض والمعارض والمدن والليالي والأيام والأشجار والأنهار.
+  p2:     نشرنا بالبرتغالية والإنجليزية والهولندية.
+  correcção: ______________________________________________
+
+[am]  አማርኛ
+  título: ስለ እኛ
+  frase:  ዘላለማዊ ዘገባ
+  p1:     ኪውቪ የዘገባ፣ የምርመራና የፈጠራ መድረክ ነው። ስለ ፌስቲቫሎች፣ ትርኢቶች፣ ኤግዚቢሽኖች፣ ከተሞች፣ ሌሊቶች፣ ቀናት፣ ዛፎችና ወንዞች እንጽፋለን።
+  p2:     በፖርቱጋልኛ፣ በእንግሊዝኛና በደች ቋንቋ አሳትመናል።
+  correcção: ______________________________________________
+
+[zh]  中文
+  título: 关于
+  frase:  永恒的报道
+  p1:     QV 是一个报道、调查与创作的平台。我们书写节庆、演出、展览、城市、夜晚、白昼、树木与河流。
+  p2:     我们曾以葡萄牙语、英语和荷兰语发表。
+  correcção: ______________________________________________
+
+[ja]  日本語
+  título: QVについて
+  frase:  永遠のルポルタージュ
+  p1:     QVはルポルタージュ、調査、創作のためのプラットフォームです。フェスティバル、公演、展覧会、都市、夜、昼、樹木、河川について書いています。
+  p2:     ポルトガル語、英語、オランダ語で発表してきました。
+  correcção: ______________________________________________
+
+[ko]  한국어
+  título: 소개
+  frase:  영원한 르포르타주
+  p1:     QV는 르포르타주와 탐사, 창작을 위한 플랫폼입니다. 우리는 페스티벌, 공연, 전시, 도시, 밤, 낮, 나무, 강에 대해 씁니다.
+  p2:     우리는 포르투갈어, 영어, 네덜란드어로 발표해 왔습니다.
+  correcção: ______________________________________________
+
+[vi]  Tiếng Việt
+  título: Giới thiệu
+  frase:  phóng sự vĩnh cửu
+  p1:     QV là một nền tảng của phóng sự, điều tra và sáng tạo. Chúng tôi viết về các liên hoan, buổi diễn, triển lãm, thành phố, đêm, ngày, cây cối và những dòng sông.
+  p2:     Chúng tôi đã xuất bản bằng tiếng Bồ Đào Nha, tiếng Anh và tiếng Hà Lan.
+  correcção: ______________________________________________
