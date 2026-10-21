@@ -21,6 +21,15 @@
 body { background: #FFFFE0; overflow-wrap: break-word; }
 img { max-width: 100%; height: auto; }
 header, footer { text-align: center; }
+
+/* Entries in the glossary, which a bare <dl> stacks with no air between them:
+   a gap after each definition so every entry stands apart, the term in bold
+   so it reads as the head of its entry, the aphorisms spaced the same, and
+   more room above each numbered heading so the eight parts separate. */
+dt { font-weight: bold; }
+dd { margin-bottom: 1em; }
+#glossario li { margin-bottom: 0.6em; }
+h3 { margin-top: 2em; }
 </style>
 </head>
 
