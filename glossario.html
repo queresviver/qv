@@ -34,17 +34,22 @@ dt { font-weight: bold; }
 dd { margin-bottom: 1em; }
 #glossario li { margin-bottom: 0.6em; }
 h3 { margin-top: 2em; }
+/* The language switch, a single link in the top right corner, out of the
+   menu. Absolute, so it takes no line of its own and moves nothing else. */
+.lang { position: absolute; top: 0.5em; right: 1em; margin: 0; }
 </style>
 </head>
 
 <body>
+
+<p class="lang"><a href="fr/glossaire.html" hreflang="fr" lang="fr">FR</a></p>
 
 <header>
 
   <h1>QV</h1>
 
   <nav>
-    <a href="index.html">Índice</a> · <a href="sobre.html">Sobre</a> · Glossário · <a href="fr/glossaire.html">FR</a>
+    <a href="index.html">Índice</a> · <a href="sobre.html">Sobre</a> · Glossário
   </nav>
 
 </header>

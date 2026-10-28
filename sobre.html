@@ -56,17 +56,22 @@ footer blockquote { margin-left: 0; margin-right: 0; }
 section[lang] { display: none; }
 section[lang]:target { display: block; }
 body:not(:has(section[lang]:target)) #pt { display: block; }
+/* The language switch, a single link in the top right corner, out of the
+   menu. Absolute, so it takes no line of its own and moves nothing else. */
+.lang { position: absolute; top: 0.5em; right: 1em; margin: 0; }
 </style>
 </head>
 
 <body>
+
+<p class="lang"><a href="fr/" hreflang="fr" lang="fr">FR</a></p>
 
 <header>
 
   <h1>QV</h1>
 
   <nav>
-    <a href="index.html">Índice</a> · Sobre · <a href="glossario.html">Glossário</a> · <a href="fr/">FR</a>
+    <a href="index.html">Índice</a> · Sobre · <a href="glossario.html">Glossário</a>
   </nav>
 
 </header>
